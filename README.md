@@ -17,6 +17,8 @@
 
 ## 📋 Table of Contents · 目录
 
+> 🧪 **Reproducible end-to-end** — see [**REPRODUCIBILITY.md**](REPRODUCIBILITY.md) for environment + one-command rerun of the core radiomics ROC. De-identified feature matrices are bundled under `data/`; entry scripts under `reproduce/`; pre-computed results and paper figures under `results/` and `figures/`.
+
 - [Key Method / 核心方法](#-key-method)
 - [Requirements / 环境要求](#-requirements)
 - [Installation / 安装](#-installation)
