@@ -1,0 +1,3 @@
+subgroup,n,n_benign,n_malignant,auc,acc
+VFA=0,15,11,4,0.6364,0.7333
+VFA>0,149,90,59,0.8337,0.7919

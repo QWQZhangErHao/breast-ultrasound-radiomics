@@ -1,0 +1,18 @@
+unified environment (clone of conda env 'conada'; same package versions)
+create with: conda create -n <name> --clone conada -y
+
+python 3.12.13
+numpy 2.5.1
+scipy 1.18.0
+pandas 3.0.3
+scikit-learn 1.9.0
+xgboost 3.3.0
+joblib 1.5.3
+torch 2.11.0+cu128
+matplotlib 3.11.0
+cv2 5.0.0
+radiomics not installed
+
+paper_repro: python 3.9.23, numpy 1.24.3, scikit-learn 1.2.2, xgboost 1.7.6
+base: python 3.13.9, scikit-learn 1.7.2, xgboost 3.4.1
+conada: python 3.12.13, numpy 2.5.1, scikit-learn 1.9.0, xgboost 3.3.0

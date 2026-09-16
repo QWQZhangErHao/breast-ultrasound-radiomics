@@ -1,0 +1,14 @@
+area,script,input,output,paper_location,environment
+01_table1,T1_canonical_main.py,01_data/01_bus_features + 01_data/02_flow_features + 01_data/04_doppler_selection,03_outputs/01_table1/T1_canonical_main.pkl,Table 1 rows G1+D3 / G1+D13,xgboost 1.7.6 stack
+01_table1,T1_1mm_pipeline.py,01_data/01_bus_features + 01_data/02_flow_features,03_outputs/01_table1/T1_1mm_pipeline.pkl + .txt,Table 1 row G1,"conda base, xgboost 3.x"
+01_table1,T1_vfa_row.py,01_data/01_bus_features + 01_data/02_flow_features,03_outputs/01_table1/T1_vfa_row.pkl,Table 1 row G1+VFA,xgboost 1.7.6 stack
+01_table1,T1_fusion_tol1e4.py,01_data/01_bus_features + 01_data/02_flow_features + 01_data/04_doppler_selection,03_outputs/01_table1/T1_fusion_tol1e4.pkl,Table 1 fusion rows,xgboost 1.7.6 stack
+01_table1,T1_publish_tables.py,03_outputs/01_table1/T1_canonical_main.pkl,03_outputs/01_table1/T1_publish_*.csv + T1_publish_report.txt,tables from canonical result,any (reads saved results)
+03_sec321_scale,S321_scale_patched.py,01_data/01_bus_features,03_outputs/03_sec321_scale/S321_scale_patched.pkl,Sec 3.2.1 scale 0-4 mm,xgboost 1.7.6 stack
+03_sec321_scale,S321_cumulative_scale.py,01_data/01_bus_features,03_outputs/03_sec321_scale/S321_cumulative_scale.csv,Sec 3.2.1 cumulative scale,04_env/environment.yml
+04_sec322_stats,S322_gen_splits.py,01_data/01_bus_features + 01_data/02_flow_features,03_outputs/04_sec322_stats/S322_splits.pkl,Sec 3.2.2 per-fold probabilities,xgboost 1.7.6 stack
+04_sec322_stats,S322_statistical_supplement.py,01_data/05_splits/splits_base_plus3.pkl,03_outputs/04_sec322_stats/S322_statistical_supplement.json + .pkl,Sec 3.2.2 Youden / DeLong / delta-AUC / p,any (reads saved splits)
+04_sec322_stats,S322_pr_youden.py,01_data/01_bus_features + 01_data/02_flow_features,03_outputs/04_sec322_stats/S322_pr_youden.txt,Sec 3.2.2 PR-AUC,xgboost 1.7.6 stack
+05_sec323_clinical,S323_clinical_utility.py,01_data/01_bus_features + 01_data/02_flow_features,03_outputs/05_sec323_clinical/S323_clinical_utility.pkl,Sec 3.2.3 NRI / Brier / Eavg / DCA,04_env/environment.yml
+06_sec324_subgroup,S324_subgroup_stats.py,01_data/06_v0/group4_BT_multi_doppler_raw.csv + 01_data/06_v0/cv_records + 01_data/06_v0/proba,03_outputs/06_sec324_subgroup/S324_*.csv,Sec 3.2.4 VFA subgroup,xgboost 1.7.6 stack
+07_all_unified,ALL_unified_pipeline.py,01_data/01_bus_features + 01_data/02_flow_features + 01_data/04_doppler_selection,03_outputs/07_all_unified/ALL_unified_results.json + .pkl,all unified numbers,04_env/environment.yml

@@ -1,0 +1,11 @@
+PR-AUC and Youden Threshold Analysis
+Model: XGBoost, 1mm peritumoral + 3 Doppler features
+Validation: 10 repeated 70/30 splits (nested LASSO)
+
+Metric                        Mean      Std
+------------------------------------------
+roc_auc                   0.8284  0.0248
+pr_auc                    0.7754  0.0442
+youden_threshold          0.3818  0.1049
+youden_sensitivity        0.7524  0.0738
+youden_specificity        0.7960  0.0852

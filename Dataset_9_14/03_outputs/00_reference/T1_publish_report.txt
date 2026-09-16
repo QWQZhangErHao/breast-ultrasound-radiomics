@@ -1,0 +1,17 @@
+CANONICAL (current released code; tol=1e-4, saga, 10 seeds)
+Bonferroni reference for the 10 pre-planned model-level comparisons: alpha = 0.005.
+
+scale 0->1mm   XGB: 0.787->0.808 d=+0.0204 t-p=0.0464
+scale 1->2mm   XGB: 0.808->0.792 d=-0.0157 t-p=0.1663
+base->+VFA     XGB: 0.808->0.811 d=+0.0035 t-p=0.4735
+base->+3       XGB: 0.808->0.827 d=+0.0196 t-p=0.0159
++VFA->+3       XGB: 0.811->0.827 d=+0.0161 t-p=0.0342
++3->+13        XGB: 0.827->0.827 d=-0.0003 t-p=0.9081
++13->+21       XGB: 0.827->0.831 d=+0.0037 t-p=0.1250
++3->+21        XGB: 0.827->0.831 d=+0.0034 t-p=0.2337
+
+Supplementary (XGB grayscale vs +3):
+  NRI 0.279±0.143 p=0.0002 event=0.057 non-event=0.222
+  Brier G 0.170±0.018 -> M 0.163±0.019 p=0.1073
+  Eavg G 0.096 vs M 0.119
+  DCA benefit range [0.03, 0.99]  | VFA0 AUC 0.833±0.174 ; VFA>0 0.818±0.029
